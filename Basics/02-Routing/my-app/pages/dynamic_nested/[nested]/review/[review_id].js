@@ -6,8 +6,7 @@ import {useRouter} from 'next/router'				// Import this hook for accessing "revi
 function ReviewDetail()
 {
 	let router = useRouter();
-	let nestedID = router.query.nested;			// Access the "nested" of parent folder
-	let reviewID = router.query.review_id;		// Access the "review_id" during routing dynamically
-	return <h1>Nested Page: {nestedID} has Review Detail: {reviewID}</h1>
+	let {nested, review_id} = router.query;		// Access the "nested" during routing dynamically
+	return <h1>Nested Page: {nested} has Review Detail: {review_id}</h1>
 }
 export default ReviewDetail;
